@@ -1,5 +1,5 @@
 function card(name, hex, rgb, category) {
-    return `<div class="item" style="box-shadow: 4px 4px 24px ${hex}66";>
+    return `<div class="item" id="${name}" onclick="highlight('${name}')" style="box-shadow: 4px 4px 24px ${hex}66";>
     <div class="color-sample" style="background-color: ${name};">
     </div>
     <div class="color-info">
@@ -45,5 +45,9 @@ function formatName(colorName) {
         newInnerHtml += `<span class="color-name-buffer">${element}</span>`;
     });
     return newInnerHtml;
+}
+
+function highlight(_id){
+    console.log(_id);
 }
 

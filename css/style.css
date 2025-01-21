@@ -40,7 +40,7 @@ h6 {
     transform: translate(-50%, 0);
 
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(16px);
+    backdrop-filter: grayscale(100%) blur(8px);
     padding: 8px 16px;
     z-index: 1;
 
@@ -112,16 +112,25 @@ input[type="search"] {
     width: 100%;
 }
 
+
+.content-container {
+    justify-self: center;
+    width: 100%;
+    max-width: var(--content-max-width);
+    padding: 80px var(--grid-gap);
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: repeat( auto-fit, minmax(256px, 1fr) );
+}
+
+
 .item {
     background-image: url('../assets/paper-texture.webp');
     background-size: cover;
     height: fit-content;
-    min-width: 280px;
     padding: 8px;
     border: gainsboro 1px solid;
     border-radius: 4px;
-    flex: 1 1 calc(var(--content-max-width)/5);
-    max-width: 400px;
 }
 
 .color-sample {
@@ -203,18 +212,6 @@ input[type="search"] {
     gap: 4px;
 }
 
-.content-container {
-    width: 100%;
-    justify-self: center;
-    max-width: var(--content-max-width);
-    padding: 80px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: var(--grid-gap);
-
-}
-
 .color-info {
     display: flex;
     flex-direction: column;
@@ -229,19 +226,17 @@ input[type="search"] {
 
 @media only screen and (max-width:800px) {
 
-    /* For mobile phones: */
     :root {
         --content-max-width: 800px;
         --grid-gap: 8px;
     }
+    .content-container {
+        grid-template-columns: repeat( auto-fit, minmax(168px, 1fr) );
+    }
+    
 
     h3 {
         font-size: 14px;
-    }
-
-    .item {
-        min-width: 152px;
-        max-width: 50%;
     }
 
     .item-details-container {
