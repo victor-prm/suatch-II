@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suatch | Web Color Library</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/boilerplate.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="floating-header">
+            <div class="standard-header">
+                <div class="header-logo">
+                    <span class="material-symbols-outlined">
+                        invert_colors
+                    </span>
+                    <h1>SUATCH</h1>
+                </div>
+                <button class="find-color-button" onclick="toggleMenu()">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+            </div>
+            <div class="search-and-filters menu-closed" id="header-dropdown">
+                <div class="filter-container">
+                    <h4>Search</h4>
+                    <input type="search" name="" id="search" class="search-field">
+                    <div id="filter-items-container">
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        </div>
+    </header>
+    <main class="content-container" id="main-content">
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="script.js"></script>
+<script src="html-components.js"></script>
+
+</html>
