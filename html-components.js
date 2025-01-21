@@ -47,7 +47,21 @@ function formatName(colorName) {
     return newInnerHtml;
 }
 
+let shouldHighlight = false;
+
 function highlight(_id){
-    console.log(_id);
+    let ele = document.getElementById(_id);
+    let overlay = document.getElementById('overlay');
+
+    shouldHighlight = !shouldHighlight;
+
+    if(shouldHighlight){
+        ele.style.zIndex = 100;
+        overlay.className = 'overlay shown';
+    }else{
+        ele.style.zIndex = 0;
+        overlay.className = 'overlay hidden';
+    }
+    console.log(_id, shouldHighlight);
 }
 
